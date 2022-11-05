@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import Button from '@mui/material/Button';;
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 const pages = ['About Me', 'Skills', 'Projects', 'Contact Me'];
@@ -49,10 +46,9 @@ function ResponsiveAppBar() {
   
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" style={{background:'#B08968'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -61,14 +57,14 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'opensans',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#EDE0D4',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            SHIN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -107,7 +103,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -117,14 +112,14 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'opensans',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#DDB892',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            SHIN
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -133,7 +128,7 @@ function ResponsiveAppBar() {
               goto="aboutme"
               key={page}
               onClick={handleCloseNavMenuForNonNavigator}
-              sx={{ my: 2, color: 'white', display: 'block' }}
+              sx={{ my: 2, color: '#DDB892', display: 'block',fontWeight: 700, }}
             >
               {page}
             </Button>
@@ -142,7 +137,7 @@ function ResponsiveAppBar() {
               goto="skills"
               key={page}
               onClick={handleCloseNavMenuForNonNavigator}
-              sx={{ my: 2, color: 'white', display: 'block' }}
+              sx={{ my: 2, color: '#DDB892', display: 'block',fontWeight: 700, }}
             >
               {page}
             </Button>
@@ -150,7 +145,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: '#DDB892', display: 'block',fontWeight: 700, }}
               >
                 {page}
               </Button>

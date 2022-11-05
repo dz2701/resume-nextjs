@@ -2,6 +2,8 @@ import { internal_processStyles } from '@mui/styled-engine';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ResponsiveAppBar from './appbar'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCat} from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -22,12 +24,12 @@ function Template() {
       </Head>
 
       <main className={styles.main}>
+        <img className={styles.profileimage} src="/icon.png" alt="..." />
         <h1 className={styles.title}>
-          Welcome to Shin's Resume Site!
+          Shin Lee
         </h1>
-
         <p className={styles.description}>
-          Last Updated November 2022.
+          Student, Developer, and <FontAwesomeIcon icon= {faCat}/> Lover
         </p>
       </main>
 
